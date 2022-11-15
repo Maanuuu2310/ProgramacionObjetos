@@ -1,9 +1,66 @@
-public class Cat {
-    public int numPatas;
-    public String name;
+public class Cat { // ATRIBUTO
+    private int numPatas;
+    private String name;
     private float peso;
     private int edad;
     private int numPasos;
+
+    private final float DEFAULT_WEIGHT = 3.0f;
+    private final int DEFAULT_AGE = 1;
+    private final int DEFAULT_STEPS = 10;
+
+    // MARTES 15 DE NOV
+
+    // GETTER
+
+    public int getNumPatas() {
+        return numPatas;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public float getPeso(){
+        return peso;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public int getNumPasos() {
+        return numPasos;
+    }
+
+    // SETTER
+
+    public void setNumPatas(int numPatas) {
+        if (numPatas < 0){
+
+        }else if (numPatas > 4) {
+
+        }else {
+            this.numPatas = numPatas;
+        }
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Cat(String name) {
+        this.name = name;
+        this.peso = DEFAULT_WEIGHT;
+        this.edad = DEFAULT_AGE;
+        this.numPasos = DEFAULT_STEPS;
+
+    }
+
+
+
+
+    //----------------CLASE ANTERIOR----------------//
 
     public Cat(int numPatas, String name, float peso, int edad) { // aca definimos el constructor
         this.numPatas = numPatas;
